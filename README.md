@@ -1,5 +1,3 @@
-# django-course-work
-
 Course project on creating a site on Django.
 
 How to run a project locally:
