@@ -1,0 +1,13 @@
+.phone {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #000000 !important;
+}
+.phone img {
+  margin-right: 14px;
+}
+.phone span {
+  font-size: 20px;
+  font-weight: 400;
+}/*# sourceMappingURL=Phone.css.map */

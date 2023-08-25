@@ -1,0 +1,21 @@
+@import '../../default/variables.scss';
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: $black-text-color !important;
+    &__circle{
+        width: 24px;
+        height: 24px;
+        margin-right: 16px;
+        border-radius: 50%;
+        background: $gray-white-color;
+        &-active{
+            background: $blue-important_hover-color;
+        }
+    }
+    span{
+        color: $blue-important_hover-color !important;
+    }
+}

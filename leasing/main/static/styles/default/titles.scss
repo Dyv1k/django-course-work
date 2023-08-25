@@ -1,0 +1,70 @@
+@import './variables.scss';
+
+.title{
+    color: $black-text-color;
+    margin: 0;
+    line-height: normal;
+}
+
+h1.title{
+    font-weight: 600;
+    font-size: 70px;
+    font-variant: small-caps;
+    &_no-found{
+        font-size: 180px;
+        color: $blue-important_hover-color;
+    }
+    &_top-section{
+        text-transform: uppercase;
+        color: $white-color;
+        // margin-bottom: 60px;
+    }
+    &_auction{
+        font-weight: 500;
+        font-size: 30px;
+    }
+    &_create-news, &_create-services{
+        margin-bottom: 50px;
+    }
+}
+
+h2.title{
+    font-size: 36px;
+    font-weight: 500;
+    &_footer{
+        margin-bottom: 18px;
+    }
+    &_review-modal{
+        margin-bottom: 18px;
+    }
+    &_top-section{
+        color: $white-color;
+    }
+    &_dropDown-wrapper{
+        margin-right: 50px;
+    }
+}
+
+h3.title{
+    font-size: 30px;
+    font-weight: 500;
+    &-bold{
+        font-weight: 700;
+    }
+    &_cards{
+        font-size: 24px;
+        &-only_title{
+            font-weight: 500;
+        }
+        &-item{
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+    &_top-section{
+        color: $white-color;
+        font-weight: 500;
+        font-size: 20px;
+
+    }
+}

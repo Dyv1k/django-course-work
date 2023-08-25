@@ -1,0 +1,21 @@
+
+
+<div class="comments">
+    <h2 class="title title_comments">Комментарии</h2>
+    <div class="comments-items">
+        {% for item in comments %}
+            <div class="comments-item">
+                <div class="comments-item-author">
+                    {{item.creator}}
+                </div>
+                <div class="comments-item-text">
+                    {{item.description|linebreaks}}
+                </div>
+                <div class="comments-item-info">
+                    <div class="comments-item-info__date">{{item.date_create}}</div>
+                    <div class="comments-item-info__time">{{item.time_create}}</div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

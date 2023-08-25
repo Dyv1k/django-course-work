@@ -1,0 +1,34 @@
+{% load static %}
+
+<div class='cards-item'>
+    <a href={{item.get_absolute_url}} class="cards-item-wrapper">
+        <div class="cards-item-img">
+            {% if item.photo %}
+                <img src="{{item.photo.url}}" alt="service">
+            {% else %}
+                <img src="{% static "images/services/default.png" %}" alt="service">
+            {% endif %}
+            <div class="cards-item-img__shadow"></div>
+            <div class="cards-item-img__wrapper">
+                {% for category in item.categories.all %}
+                    <div class="cards-item-img__type">{{category}}</div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="cards-item-text">
+            <h3 class="title title_cards title-bold">{{item.title}}</h3>
+            <div class="cards-item-text__description" data-text_split>{{item.description}}</div>
+            <div class="cards-item-text__price"><span data-number_split>{{item.price}}</span> ₽</div>
+        </div>
+    </a>
+    
+    {% if mainConfig.role == 'Client' %}
+        {% if item.id in cart %}
+            <button class="button button_medium button_disable">В корзине</button>
+        {% else %}
+            <a href={% url 'addCart' services_id=item.id page="services" %} class="button button_medium">
+                Добавить в корзину
+            </a>
+        {% endif %}
+    {% endif %}
+</div>

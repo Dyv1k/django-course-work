@@ -1,0 +1,64 @@
+@import '../../default/variables.scss';
+
+.input, input[type="password"]{
+    width: calc(100% - 95px);
+    border-radius: 46px;
+    border: 2px solid $gray-dark-color;
+    padding: 14px 50px 14px 41px;
+    font-size: 18px;
+    font-weight: 500;
+    color: $black-text-color;
+    outline: none;
+    &:focus{
+        border: 2px solid $gray-dark-color;
+    }
+    &::placeholder{
+        color: $gray-dark-color;
+    }
+}
+
+.input{
+    &-block{
+        width: 580px;
+        margin-bottom: 30px;
+        &-wrapper{
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    }
+    &-label{
+        font-size: 20px;
+        font-weight: 500;
+        margin-right: 10px;
+    }
+    &-error{
+        display: none;
+        margin-top: 20px;
+        margin-left: 40px;
+        color: $error-color;
+        font-size: 16px;
+        &_active{
+            display: block;
+        }
+    }
+    &-not_valid{
+        border: 2px solid $error-color;
+    }
+    &-valid{
+        border: 2px solid $accept-color;
+    }
+    &-disable{
+        pointer-events: none;
+        border: 2px solid $gray-white-color;
+        color: $gray-white-color;
+        &::placeholder{
+            color: $gray-white-color;
+        }
+    }
+    &-wrapper{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+}

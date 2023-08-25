@@ -1,0 +1,17 @@
+{% load static %}
+
+{% if image %}
+    <section class="top-section">
+        <img 
+                class="top-section-background top-section-background__image" 
+                src={% static image %} 
+                alt="top image"
+        >
+        <div class="top-section-content">
+            <div class="container">
+                <h1 class="title title_top-section">{{title}}</h1>
+            </div>
+        </div>            
+    </section>
+{% endif %}
+

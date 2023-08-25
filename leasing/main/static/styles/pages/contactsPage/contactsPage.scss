@@ -1,0 +1,59 @@
+@import '../../default/variables.scss';
+
+.contacts{
+    &-map, &-phones, &-developer{
+        margin-top: 30px;
+    }
+    &-map{
+        &__block{
+            margin-top: 20px;
+        }
+    }
+    &-items{
+        margin: 0;
+        padding: 0 0 0 50px;
+    }
+    &-item{
+        margin-top: 20px;
+        list-style: none;
+        font-size: 20px;
+        font-weight: 500;
+        div, a{
+            margin: 15px 0;
+        }
+        &__title{
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
+    &-developer{
+        span{
+            display: block;
+            margin: 20px 0;
+        }
+        .contacts-item{
+            &:nth-last-child(2){
+                span{
+                    &:last-child{
+                        color: $error-color
+                    }
+                }
+            }
+            &:last-child{
+                display: flex;
+                align-items: center;
+            }
+            a{
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 30px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

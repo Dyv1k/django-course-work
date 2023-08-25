@@ -1,0 +1,21 @@
+{% extends '../../layouts/default.html' %}
+
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href={% static "styles/components/Cards/Cards.css" %}>
+    <link rel="stylesheet" href={% static "styles/components/PageDescription/PageDescription.css" %}>
+{% endblock %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    {% include "../../components/PageDescription/PageDescription.html" with description=description %}
+    {% include "../../components/CardsSection/CardsSection.html" with list=news title='Последние новости' cardType='news' form=filterForm %}
+{% endblock %}
+
+{% block scripts %}
+    <script type="module" src={% static "interface/setSplits.js" %}></script>
+{% endblock %}

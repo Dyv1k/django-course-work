@@ -1,0 +1,28 @@
+{% load static %}
+
+<section class="page-description">
+    <div class="container">
+        <div class="page-description__wrapper">
+            <h2 class="title title_page-description">{{description.title}}</h2>
+            <div class="page-description__text">
+                {% for item in description.descriptions %}
+                    <span>{{item}}</span>
+                {% endfor %}
+            </div>
+            {% if description.advantages %}
+            <div class="page-description-advantages">
+                {% for item in description.advantages %}
+                    <div class="page-description-advantage">
+                        {% if item.img == 'clock' %}
+                            <img src={% static 'images/icons/clock.svg' %} alt="image" />
+                        {% elif item.img == 'location' %}
+                            <img src={% static 'images/icons/location.svg' %} alt="image" />
+                        {% endif %}
+                        <span>{{item.description}}</span>
+                    </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

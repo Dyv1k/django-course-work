@@ -1,0 +1,66 @@
+.title {
+  color: #000000;
+  margin: 0;
+  line-height: normal;
+}
+
+h1.title {
+  font-weight: 600;
+  font-size: 70px;
+  font-variant: small-caps;
+}
+h1.title_no-found {
+  font-size: 180px;
+  color: #4C34E4;
+}
+h1.title_top-section {
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+h1.title_auction {
+  font-weight: 500;
+  font-size: 30px;
+}
+h1.title_create-news, h1.title_create-services {
+  margin-bottom: 50px;
+}
+
+h2.title {
+  font-size: 36px;
+  font-weight: 500;
+}
+h2.title_footer {
+  margin-bottom: 18px;
+}
+h2.title_review-modal {
+  margin-bottom: 18px;
+}
+h2.title_top-section {
+  color: #FFFFFF;
+}
+h2.title_dropDown-wrapper {
+  margin-right: 50px;
+}
+
+h3.title {
+  font-size: 30px;
+  font-weight: 500;
+}
+h3.title-bold {
+  font-weight: 700;
+}
+h3.title_cards {
+  font-size: 24px;
+}
+h3.title_cards-only_title {
+  font-weight: 500;
+}
+h3.title_cards-item {
+  font-size: 18px;
+  font-weight: 600;
+}
+h3.title_top-section {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 20px;
+}/*# sourceMappingURL=titles.css.map */

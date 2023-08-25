@@ -1,0 +1,33 @@
+.page-description{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    .title{
+        margin-bottom: 18px;
+    }
+    &__text{
+        span{
+            display: block;
+            margin-top: 30px;
+        }
+    }
+    &__wrapper{
+        width: 85%;
+    }
+    &-advantages{
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+    }
+    &-advantage{
+        display: flex;
+        align-items: center;
+        margin-left: 60px;
+        img{
+            margin-right: 20px;
+        }
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+}

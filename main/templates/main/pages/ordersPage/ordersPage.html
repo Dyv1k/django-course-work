@@ -1,0 +1,35 @@
+{% extends '../../layouts/default.html' %}
+
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href={% static "styles/components/Orders/Orders.css" %}>
+    <link rel="stylesheet" href={% static "styles/UI/Button/Button.css" %}>
+{% endblock %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <section class="orders">
+        <div class="container">
+            <h1 class="title title_orders">  
+                {% if orders|length != 0 %}
+                    {{title}}
+                {% else %}
+                    Нет заказов
+                {% endif %} 
+            </h1>
+            <div class="orders-items">
+                {% for order in orders %}
+                    {% include "../../components/OrderItem/OrderItem.html" with order=order %}
+                {% endfor %}
+            </div>  
+        </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+    <script type='module' src={% static 'interface/setSplits.js' %}></script>
+{% endblock scripts %}

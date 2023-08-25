@@ -1,0 +1,23 @@
+{% extends '../../layouts/default.html' %}
+
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href={% static "styles/UI/Input/Input.css" %}>
+    <link rel="stylesheet" href={% static "styles/UI/Button/Button.css" %}>
+    <link rel="stylesheet" href={% static "styles/UI/TextArea/TextArea.css" %}>
+    <link rel="stylesheet" href={% static "styles/UI/Select/Select.css" %}>
+{% endblock %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <section class="create-services">
+        <div class="container">
+            <h1 class="title title_create-services">{{ title }}</h1>
+            {% include "../../UI/Forms/Form.html" with form=form %}
+        </div>
+    </section>
+{% endblock %}

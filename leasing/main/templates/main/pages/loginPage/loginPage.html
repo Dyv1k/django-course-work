@@ -1,0 +1,23 @@
+{% extends '../../layouts/default.html' %}
+
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href={% static "styles/UI/Input/Input.css" %}>
+    <link rel="stylesheet" href={% static "styles/UI/Button/Button.css" %}>
+{% endblock %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <section class="login">
+        <div class="container">
+            <div class="login-block">
+                <h1 class="title title_login">{{ title }}</h1>
+                {% include "../../UI/Forms/Form.html" with form=form %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% load static %}
+
+<a href={{item.get_absolute_url}} class="cards-item cards-item-news">
+    <div class="cards-item-wrapper cards-item-news-wrapper">
+        <div class="cards-item-img cards-item-news-img">
+            {% if item.photo %}
+                <img src="{{item.photo.url}}" alt="new">
+            {% else %}
+                <img src="{% static "images/news/default.png" %}" alt="new">
+            {% endif %}
+            <div class="cards-item-img__shadow cards-item-news-img__shadow"></div>
+            <div class="cards-item-img__wrapper cards-item-news-img__wrapper">
+                {% for category in item.categories.all %}
+                    <div class="cards-item-img__type">{{category}}</div>
+                {% endfor %}
+            </div>
+            <div class="cards-item-img__date">{{item.date_create}}</div>
+        </div>
+        <div class="cards-item-text cards-item-news-text">
+            <h3 class="title title_cards-item">{{item.title}}</h3>
+            <div class="cards-item-text__description cards-item-news-text__description" data-text_split>
+                {{item.description}}
+            </div>
+        </div>
+    </div>
+</a>

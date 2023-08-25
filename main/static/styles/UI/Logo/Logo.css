@@ -1,0 +1,19 @@
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #000000 !important;
+}
+.logo__circle {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  border-radius: 50%;
+  background: #C0C0C0;
+}
+.logo__circle-active {
+  background: #4C34E4;
+}
+.logo span {
+  color: #4C34E4 !important;
+}/*# sourceMappingURL=Logo.css.map */

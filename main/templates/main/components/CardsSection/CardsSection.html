@@ -1,0 +1,23 @@
+
+<section class="page-items">
+    <div class="container">
+        <h2 class="title title_news">{{title}}</h2>
+        {% if form %}
+            {% include "../../UI/Filters/Filters.html" with form=form %}
+        {% endif %}  
+        <div class="page-items-content page-items-content">
+            <div class="cards">
+                <div class="cards-items">
+                    {% for item in list %}
+                        {% if cardType == 'news' %}
+                            {% include "../../components/News/News.html" with item=item %}
+                        {% endif %}
+                        {% if cardType == 'services' %}
+                            {% include "../../components/Services/Services.html" with item=item cart=cart%}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,45 @@
+.contacts-map, .contacts-phones, .contacts-developer {
+  margin-top: 30px;
+}
+.contacts-map__block {
+  margin-top: 20px;
+}
+.contacts-items {
+  margin: 0;
+  padding: 0 0 0 50px;
+}
+.contacts-item {
+  margin-top: 20px;
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+.contacts-item div, .contacts-item a {
+  margin: 15px 0;
+}
+.contacts-item__title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.contacts-developer span {
+  display: block;
+  margin: 20px 0;
+}
+.contacts-developer .contacts-item:nth-last-child(2) span:last-child {
+  color: #C93558;
+}
+.contacts-developer .contacts-item:last-child {
+  display: flex;
+  align-items: center;
+}
+.contacts-developer .contacts-item a {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+.contacts-developer .contacts-item a img {
+  width: 100%;
+}/*# sourceMappingURL=contactsPage.css.map */

@@ -1,0 +1,24 @@
+{% load static %}
+
+<form class="form" method='POST' enctype="multipart/form-data">
+    
+    {% if form.non_field_errors %}
+        <div class='input-error input-error_active'>{{form.non_field_errors}}</div>
+    {% endif %}
+        
+    {% csrf_token %}
+    {% for field in form %}
+        <div class='input-block'>
+            <div class='input-block-wrapper'>
+                <label class="input-label" for="{{ field.id_for_label }}">
+                    {{field.label}}
+                </label>
+            </div>
+            {{ field }}
+            {% if field.errors %}
+                <div class='input-error input-error_active'>{{field.errors}}</div>
+            {% endif %}
+        </div>
+    {% endfor %}
+    <button class="button button_small" type="submit">Отправить</button>
+</form>

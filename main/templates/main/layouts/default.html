@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href={% static "favicon.ico" %}>
+    <link rel="icon" href={% static "images/favicons/favicon-32x32.png" %} type="image/png">
+    <link rel="apple-touch-icon" href={% static "images/favicons/apple-touch-icon.png" %}>
+    <link rel="stylesheet" href={% static "styles/default/normalize.css" %}>
+    <link rel="stylesheet" href={% static "styles/default/fonts.css" %}>
+    <link rel="stylesheet" href={% static "styles/default/style.css" %}>
+    <link rel="stylesheet" href={% static "styles/default/titles.css" %}>
+    <link rel="stylesheet" href={% static "styles/UI/Logo/Logo.css" %}>
+    <link rel="stylesheet" href={% static "styles/UI/Phone/Phone.css" %}>
+    <link rel="stylesheet" href={% static "styles/components/Header/Header.css" %}>
+    <link rel="stylesheet" href={% static "styles/components/Footer/Footer.css" %}>
+    <link rel="stylesheet" href={% static "styles/components/TopSection/TopSection.css" %}>
+    {% block styles %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-info">
+                <div class="header-info__wrapper">
+                    <div class="header-info-item">
+                        <img src="{% static "images/icons/location.svg" %}" alt="location" />
+                        <span>Псков</span>
+                    </div> 
+                    {% include "../UI/Phone/Phone.html" with phone=mainConfig.mainPhone %}
+                </div>
+            </div> 
+            <div class="header-main">
+                {% include "../UI/Logo/Logo.html" %}
+                {% include "../UI/HeaderMenu/HeaderMenu.html" with role=mainConfig.role cartLength=mainConfig.cartLength %}
+                <div class="header-main-account">
+                    <div class="header-main-account_disable">
+                        {% if request.user.is_authenticated %}
+                            <a href='#' class="header-main-account">
+                                <span>{{user.username}}</span>
+                            </a>
+                            <a href={% url 'logout' %}>
+                                <img src={% static 'images/icons/login.svg' %} alt="login" />
+                                <span>Выход</span>
+                            </a>
+                        {% else %}
+                            <a href={% url 'login' %}>
+                                <img src={% static 'images/icons/login.svg' %} alt="login" />
+                                <span>Вход</span>
+                            </a>
+                            <a href={% url 'registration' %} class="header-main-account">
+                                <span>Регистрация</span>
+                            </a>
+                        {% endif %}    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+    </header>
+
+    {% include "../components/TopSection/TopSection.html" with title=title image=mainConfig.topImage %}
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                {% include "../UI/Logo/Logo.html" %}
+                {% include "../UI/Phone/Phone.html" with phone=mainConfig.mainPhone %}
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <div class="footer-bottom-links__copyright">Лизинг Ⓒ 2022. Все права защищены</div>
+                    <div class="footer-bottom-links__wrapper">
+                        <div class="footer-bottom-links-social">
+                            <a href="https://web.telegram.org/z/" target="_blank" rel="nofollow">
+                                <img src="{% static "images/social/telegram.svg" %}" alt="telegram" />
+                            </a>
+                            <a href="https://vk.com/" target="_blank" rel="nofollow">
+                                <img src="{% static "images/social/vk.svg" %}" alt="vk" />
+                            </a>
+                            <a href="https://rutube.ru/" target="_blank" rel="nofollow">
+                                <img src="{% static "images/social/rutube.svg" %}" alt="rutube" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,42 @@
+.users-page-items {
+  display: grid;
+  grid-auto-columns: 0.8fr;
+  gap: 20px;
+}
+.users-page-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  background: #F1F3FF;
+  padding: 20px;
+}
+.users-page-item__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: #bbb5e0;
+  padding: 10px;
+  min-height: 40px;
+}
+.users-page-item__actions {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.users-page-item__actions a {
+  margin-right: 20px;
+}
+.users-page-item__actions a:last-child {
+  margin-right: 0;
+}
+.users-page-item__first_name, .users-page-item__last_name, .users-page-item__second_name, .users-page-item__phone, .users-page-item__role {
+  min-width: 150px;
+  max-width: 200px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.users-page__pannel {
+  margin-bottom: 40px;
+}/*# sourceMappingURL=usersPage.css.map */
